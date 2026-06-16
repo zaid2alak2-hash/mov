@@ -33,7 +33,7 @@ def convert_file(input_path: Path) -> tuple[str, bool, float, str]:
         "-allow_sw", "1",
         "-alpha_quality", "0.75",
         "-r", "20",
-        "-b:v", "700k",
+        "-b:v", "1000k",
         "-tag:v", "hvc1",
         "-c:a", "aac",
         "-b:a", "64k",
