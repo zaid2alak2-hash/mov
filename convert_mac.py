@@ -28,8 +28,9 @@ def convert_file(input_path: Path) -> tuple[str, bool, float, str]:
     cmd = [
         "ffmpeg", "-y",
         "-vcodec", "libvpx-vp9",
-        "-r", "20",
         "-i", str(input_path),
+        "-vf", "setpts=N/20/TB,format=bgra",
+        "-r", "20",
         "-c:v", "hevc_videotoolbox",
         "-allow_sw", "1",
         "-realtime", "0",
