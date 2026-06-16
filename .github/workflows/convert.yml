@@ -33,6 +33,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
 
       - name: Run conversion script
+        env:
+          PYTHONUNBUFFERED: "1"
         run: python3 convert_mac.py
 
       - name: Upload result as artifact
