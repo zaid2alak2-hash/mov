@@ -34,7 +34,6 @@ jobs:
 
       - name: Run conversion script
         run: python3 convert_mac.py
-        working-directory: mov
 
       - name: Upload result as artifact
         uses: actions/upload-artifact@v4
